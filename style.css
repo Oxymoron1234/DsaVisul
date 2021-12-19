@@ -10,7 +10,6 @@ html, body{
 .options-icon{
     width: 4rem;
     height: 4rem;
-    
     position: absolute;
     top: 3rem;
     left: 3rem;
@@ -66,10 +65,10 @@ html, body{
 .resize-tool{
     height:3rem;
     width: 10rem;
-    /* background-color: aquamarine; */
     position: absolute;
     top: 6rem;
-    left: 22vw;
+    left: 20vw;
+    
 }
 .resize-tool input{
     display: none;
@@ -82,10 +81,9 @@ html, body{
 .bacground-clr{
     height:3rem;
     width: 10rem;
-    /* background-color: aquamarine; */
     position: absolute;
     top: 6rem;
-    left: 33vw;
+    left: 30vw;
     display: none;
 }
 /* .bacground-clr img{
@@ -128,7 +126,6 @@ html, body{
 }
 .notes-header-cont{
    height:2rem;
- /* background-color: yellowgreen;  */
  display:flex;
  justify-content: flex-end;
  align-items: center;
@@ -159,31 +156,7 @@ textarea{
     resize: none;
 }
 
-/* #border{
-    display: none;
-} */
-/* .iamsquare{
-    position: absolute;
-    top: 80px;
-    left: 40px;
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    margin-left:200px;
-    resize:both;
-} */
 
-/* .iamcircle{
-    position: absolute;
-    top: 80px;
-    left: 60px;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 1px solid black;
-    margin-left:200px
-    
-} */
 .canvaPro{
     height: 40rem;
     width: 80rem;
@@ -198,10 +171,26 @@ textarea{
     position: absolute;
     border: 1px solid  black;
 } */
-.paint-canvas {
-    /* border: 1px black solid; */
+/* .paint-canvas{
     display: block;
-    
+  } */
+  .tools-cont img{
+    transition: transform .7s ease-in-out;
   }
- 
+  .tools-cont img:hover {
+    cursor: pointer;
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  
+    transform: rotate(360deg);
+    transition: all 0.2s;
+    transform-origin: 50% 50%;
+  }
+
+  .item-cont img:hover {
+    cursor: pointer;
+    transform: scale(1.2) ;    
+    transition: all 0.2s;
+    transform-origin: 50% 50%;
+  }
+  
  

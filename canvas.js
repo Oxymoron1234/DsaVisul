@@ -1,11 +1,10 @@
 let pencil = document.querySelector("#pencil")
-let line = document.querySelector("#line")
-let redo = document.querySelector("#redo")
-let undo = document.querySelector("#undo")
 let kheecho = document.querySelector("#kheecho")
 let pencolor_red = document.querySelector("#red");
 let pencolor_blue = document.querySelector("#blue");
 let pencolor_green = document.querySelector("#green");
+let white = document.querySelector("#white")
+let black = document.querySelector("#black")
 let pencil_col_cont = document.querySelectorAll(".bacground-clr")
 let pencil_size = document.querySelector("#sizing")
 // let penColor = "red"
@@ -115,4 +114,18 @@ let pencil_size = document.querySelector("#sizing")
 //         return false;
 //     };
 // })
-
+pencolor_red.addEventListener("click", (e)=>{
+    canvas.style.backgroundColor = "red"
+})
+pencolor_blue.addEventListener("click", (e)=>{
+    canvas.style.backgroundColor = "blue"
+})
+pencolor_green.addEventListener("click", (e)=>{
+    canvas.style.backgroundColor = "green"
+})
+white.addEventListener("click", (e)=>{
+    canvas.style.backgroundColor = "white"
+})
+black.addEventListener("click", (e)=>{
+    canvas.style.backgroundColor = "black"
+})

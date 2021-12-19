@@ -5,7 +5,6 @@ let resizable = document.querySelector("#sizing")
 let resizeBar = document.querySelector("#resize1")
 let bgColor = document.querySelector(".bacground-clr")
 let borderBar = document.querySelector("#border")
-let sticky = document.querySelector("#text")
 let colourSelector = document.querySelector(".js-color-picker")
 let download = document.getElementById("save")
 let clear = document.getElementById("clear")
@@ -60,29 +59,29 @@ borderBar.addEventListener("click", (e) =>{
     }
 } )
 
-sticky.addEventListener("click", (e) =>{
-    let stickyCont  = document.createElement("div")
-    stickyCont.setAttribute("class", "notes")
-    stickyCont.innerHTML = `
-    <div class="notes-header-cont">
-        <div class="mini"></div>
-        <div class="removeNotes"></div>
-    </div>
-    <div class="notes-cont">
-            <textarea name="" id="" ></textarea>
-    </div>
-    `
-    let mini = stickyCont.querySelector(".mini")
-    let rem = stickyCont.querySelector(".removeNotes")
-    noteActions(mini, rem, stickyCont);
-    document.body.appendChild(stickyCont)
-    stickyCont.onmousedown = function(event){
-        dragAndDrop(stickyCont , event)
-    }
-    stickyCont.ondragstart = function() {
-        return false;
-      };
-})
+// sticky.addEventListener("click", (e) =>{
+//     let stickyCont  = document.createElement("div")
+//     stickyCont.setAttribute("class", "notes")
+//     stickyCont.innerHTML = `
+//     <div class="notes-header-cont">
+//         <div class="mini"></div>
+//         <div class="removeNotes"></div>
+//     </div>
+//     <div class="notes-cont">
+//             <textarea name="" id="" ></textarea>
+//     </div>
+//     `
+//     let mini = stickyCont.querySelector(".mini")
+//     let rem = stickyCont.querySelector(".removeNotes")
+//     noteActions(mini, rem, stickyCont);
+//     document.body.appendChild(stickyCont)
+//     stickyCont.onmousedown = function(event){
+//         dragAndDrop(stickyCont , event)
+//     }
+//     stickyCont.ondragstart = function() {
+//         return false;
+//       };
+// })
 //================================================================
     function noteActions(mini, rem, stickyCont) {
          rem.addEventListener("click", e => {stickyCont.remove()})
@@ -134,7 +133,7 @@ function dragAndDrop(ele , event) {
 //===========================canvas suru =================================================================
 download.addEventListener("click", (e) => {
     let a = document.createElement("a")
-    a.href = document.toDataURL();
+    a.href = canvas.toDataURL();
     a.download = "board.jpg";
     a.click();
 })
@@ -145,8 +144,17 @@ clear.addEventListener("click", (e) => {
 })
 eraser.addEventListener("click", (e) => {
     let color = "white";
-    context.strokeStyle = color;
+    // context.strokeStyle = color;
+    context.globalCompositeOperation = 'destination-out'
     context.lineWidth = lineWidthRange.value;
+     var url = canvas.toDataURL()
+    tracker.push( url )
+    index = tracker.length-1; 
     // context.lineWidth = "50";
 })
+
+
+
+
+
 
