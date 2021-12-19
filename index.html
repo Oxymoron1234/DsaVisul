@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="tools.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+
 <body>
     <div class="options-icon">
         <i class="fas fa-bars"></i>
     </div>
     <div class="tools-cont scale-tool">
-            <img src="icons/pencil.svg" alt="pencil" id="pencil">
-            <img src="icons/line.svg" alt="line" id="line">
-            <img src="icons/eraser.svg" alt="eraser" id="eraser">
-            <img src="icons/circle.svg" alt="circle" id="circle">
-            <img src="icons/square-line.svg" alt="box" id="square">
-            <img src="icons/text.svg" alt="text" id="text">
-            <img src="icons/redo.svg" alt="redo" id="redo">
-            <img src="icons/undo.svg" alt="undo" id="undo">
+        <img src="icons/pencil.svg" alt="pencil" id="pencil">
+        <img src="icons/line.svg" alt="line" id="line">
+        <img src="icons/eraser.svg" alt="eraser" id="eraser">
+        <img src="icons/circle.svg" alt="circle" id="circle">
+        <img src="icons/square-line.svg" alt="box" id="square">
+        <img src="icons/text.svg" alt="text" id="text">
+        <img src="icons/redo.svg" alt="redo" id="redo">
+        <img src="icons/undo.svg" alt="undo" id="undo">
     </div>
     <div class="item-cont scale-tool">
-            <img src="icons/resize1.svg" alt="resize" id="resize1">
-            <img src="icons/red.svg" alt="red" id="red">
-            <img src="icons/blue.svg" alt="blue" id="blue">
-            <img src="icons/green.svg" alt="green" id="green">
-            <img src="icons/border.svg" alt="border" id="border" >
+        <img src="icons/resize1.svg" alt="resize" id="resize1">
+        <img src="icons/border.svg" alt="border" id="border">
+        <img src="icons/red.svg" alt="red" id="red">
+        <img src="icons/blue.svg" alt="blue" id="blue">
+        <img src="icons/green.svg" alt="green" id="green">
+
+        <!-- <img src="icons/resize.svg" alt="kheecho" id="kheecho"> -->
         <img src="icons/save.svg" alt="save" id="save" id="save">
         <img src="icons/clear.svg" alt="clear" id="clear">
-</div>
-<div class="resize-tool">
-           <input type="range" name="" id="sizing" min="2" max="10" value="3">     
-</div>
-<div class="eraser-tool">
-    <!-- <input type="range" name="" id="sizing" min="2" max="10" value="3">  -->
-</div>
-<div class="bacground-clr">
-    <div class=" bg-green bg-colour">
-        <img src="icons/green.svg" alt="green" id="bg-green">
     </div>
-    <div class=" bg-red bg-colour">
-        <img src="icons/red.svg" alt="red" id="red">
+    <div class="resize-tool">
+        <input type="range" name="" id="sizing" min="1" max="72" value="2" class="js-line-range">
+        <!-- <input type="color" class="js-color-picker  color-picker"> -->
     </div>
-    <div class="bg-blue bg-colour">
-        <img src="icons/blue.svg" alt="blue" id="bg-blue">
+    <div class="eraser-tool">
+        <!-- <input type="range" name="" id="sizing" min="2" max="10" value="3">  -->
     </div>
-</div>
+    <div class="bacground-clr">
+        <input type="color" class="js-color-picker  color-picker">
+        <!-- <div class=" bg-green bg-colour">
 
-<!-- <div class="notes">
-    <div class="notes-header-cont">
-        <div class="mini"></div>
-        <div class="removeNotes"></div>
+            <img src="icons/green.svg" alt="green" id="bg-green">
+        </div>
+        <div class=" bg-red bg-colour">
+            <img src="icons/red.svg" alt="red" id="red">
+        </div>
+        <div class="bg-blue bg-colour">
+            <img src="icons/blue.svg" alt="blue" id="bg-blue">
+        </div> -->
     </div>
-    <div class="notes-cont">
-            <textarea name="" id="" ></textarea>
-    </div>
-</div> -->
-   <div class="canvaPro" >
-    <div class="fortheSquare"></div>
 
-    <canvas id="canvas"></canvas>
-   </div>
-   
+
+    <!-- <canvas id="canvas"></canvas> -->
+    <!-- <div class="canvaPro" >
     
+    <div class="fortheSquare"></div>
+   </div> -->
+
+
+    <!-- <label class="js-range-value">1</label>Px -->
+    <canvas class="js-paint  paint-canvas"></canvas>
+
+
 </body>
 <script src="tool.js"></script>
+<script src="canva.js"></script>
 <script src="canvas.js"></script>
+
 </html>

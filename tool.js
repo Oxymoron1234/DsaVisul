@@ -6,6 +6,10 @@ let resizeBar = document.querySelector("#resize1")
 let bgColor = document.querySelector(".bacground-clr")
 let borderBar = document.querySelector("#border")
 let sticky = document.querySelector("#text")
+let colourSelector = document.querySelector(".js-color-picker")
+let download = document.getElementById("save")
+let clear = document.getElementById("clear")
+let eraser = document.getElementById("eraser")
 let opFlag = true;
 let resizeFlag = false;
 let bgColorFlag = false;
@@ -39,16 +43,20 @@ resizeBar.addEventListener("click", (e) =>{
     resizeFlag = !resizeFlag;
     if (resizeFlag) {
         resizable.style.display = "block"
+      //  colourSelector.style.display = "block"
     }else{
         resizable.style.display = "none"
+       // colourSelector.style.display = "none"
     }
 } )
 borderBar.addEventListener("click", (e) =>{
     bgColorFlag = !bgColorFlag;
     if(bgColorFlag){
         bgColor.style.display="flex"
+        //colourSelector.style.display = "block"
     }else{
-        bgColor.style.display = "none"
+       bgColor.style.display = "none"
+       //colourSelector.style.display = "none"
     }
 } )
 
@@ -75,6 +83,7 @@ sticky.addEventListener("click", (e) =>{
         return false;
       };
 })
+//================================================================
     function noteActions(mini, rem, stickyCont) {
          rem.addEventListener("click", e => {stickyCont.remove()})
          mini.addEventListener("click" , (e)=>{
@@ -123,3 +132,21 @@ function dragAndDrop(ele , event) {
 }
 
 //===========================canvas suru =================================================================
+download.addEventListener("click", (e) => {
+    let a = document.createElement("a")
+    a.href = document.toDataURL();
+    a.download = "board.jpg";
+    a.click();
+})
+clear.addEventListener("click", (e) => {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    // mycircle.style.display = "none";
+    // mysquare.style.display = "none"
+})
+eraser.addEventListener("click", (e) => {
+    let color = "white";
+    context.strokeStyle = color;
+    context.lineWidth = lineWidthRange.value;
+    // context.lineWidth = "50";
+})
+

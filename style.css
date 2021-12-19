@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body{
+    height: 100%;
+    width: 100%;
+}
 .options-icon{
     width: 4rem;
     height: 4rem;
@@ -73,6 +77,7 @@
     justify-content: center;
     margin-top:1rem;
     margin-left: 1rem;
+    
 }
 .bacground-clr{
     height:3rem;
@@ -80,17 +85,26 @@
     /* background-color: aquamarine; */
     position: absolute;
     top: 6rem;
-    left: 60vw;
+    left: 33vw;
     display: none;
 }
-.bacground-clr img{
+/* .bacground-clr img{
     height:2rem;
     width:2rem;
     display: flex;
     justify-content: space-evenly;
     margin-top: 0.5rem;
     margin-left: 1rem;
-}
+} */
+.color-picker{
+    height:2rem;
+    width:4rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }
+
 .scale-tool{
     animation-name: scaleT;
     animation-duration: 1s;
@@ -106,7 +120,7 @@
 }
 .notes{
     height:4rem;
-    width: 20rem;background-color:aliceblue;
+    width: fit-content;background-color:aliceblue;
     position: absolute;
     top: 15rem;
     left: 15rem;
@@ -139,45 +153,55 @@
 }
 textarea{
     height: 100%;
-    width: 100%;
+    width: fit-content;
     outline: none;
     border: none;
     resize: none;
 }
-canvas{
-    height: 100%;
-    width: 100%;
-}
+
 /* #border{
     display: none;
 } */
-.iamsquare{
+/* .iamsquare{
     position: absolute;
-    top: 8rem;
-    left: 4rem;
+    top: 80px;
+    left: 40px;
     height: 100px;
     width: 100px;
     border: 1px solid black;
-    margin-left:200px
-}
+    margin-left:200px;
+    resize:both;
+} */
 
-.iamcircle{
+/* .iamcircle{
     position: absolute;
-    top: 8rem;
-    left: 6rem;
+    top: 80px;
+    left: 60px;
     height: 100px;
     width: 100px;
     border-radius: 50%;
     border: 1px solid black;
     margin-left:200px
-}
-.canvaPro{
     
-    height:40rem;
+} */
+.canvaPro{
+    height: 40rem;
     width: 80rem;
     position: absolute;
     top: 8rem;
     left: 10vw;
-
-
+    border: 1px solid black;
 }
+/* canvas{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 1px solid  black;
+} */
+.paint-canvas {
+    /* border: 1px black solid; */
+    display: block;
+    
+  }
+ 
+ 
