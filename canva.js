@@ -119,7 +119,7 @@ function lineBanao() {
     context.strokeStyle = "black";
     let x = 0, y = 0;
     let isMouseDown = false;
-    iscircle = false; iscircle = false;
+    isrect = false; iscircle = false;
     const stopDrawing = () => { isMouseDown = false; }
     const startDrawing = event => {
         isMouseDown = true;
@@ -186,6 +186,7 @@ function undoRedoTracker(trackerObj) {
 }
 //============================Abc likh k dikhao =============================
 function abcLikho() {
+    iscircle = false, isrect = false, isline = false;
     var mouseX = 0;
     var mouseY = 0;
     var startingX = 0;
